@@ -1,6 +1,6 @@
 plugins {
     id 'com.android.library'
-    id 'com.github.dcendents.android-maven'
+//    id 'com.github.dcendents.android-maven'
 }
 
 android {
@@ -12,19 +12,15 @@ android {
         versionCode 100
         versionName "1.0.0"
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
     }
-
-    lintOptions {
-        checkReleaseBuilds false
-        abortOnError false
-    }
 }
 
 dependencies {
-    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.1'
+    api 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.1'
     implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
     implementation 'androidx.appcompat:appcompat:1.2.0'
 }
