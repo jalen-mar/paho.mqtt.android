@@ -1,6 +1,19 @@
 plugins {
     id 'com.android.library'
-//    id 'com.github.dcendents.android-maven'
+    id 'maven-publish'
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'org.eclipse.paho.android.service'
+                artifactId = 'mqttclient'
+                version = '1.0.0'
+            }
+        }
+    }
 }
 
 android {
